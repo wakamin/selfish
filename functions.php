@@ -120,8 +120,9 @@ add_action( 'widgets_init', 'selfish_widgets_init' );
  * Enqueue scripts and styles.
  */
 function selfish_scripts() {
-	wp_enqueue_style( 'selfish-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Libre+Franklin' ); 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+	wp_enqueue_style( 'selfish-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'selfish-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '20151215', true );

@@ -36,3 +36,8 @@ function site_logo_url() {
 	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	return $image[0];
 }
+
+function post_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'post_excerpt_length', 999 );
