@@ -30,3 +30,9 @@ function selfish_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'selfish_pingback_header' );
+
+function site_logo_url() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	return $image[0];
+}
