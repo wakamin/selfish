@@ -1,0 +1,28 @@
+{
+    "name": "selfish",
+    "version": "1.0.0",
+    "description": "Selfish is a Wordpress theme based on Bootstrap 4 that focus on the simplicity of the post page",
+    "main": "index.js",
+    "scripts": {
+        "build": "sass assets/css/main.scss assets/css/main.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wakamin/selfish.git"
+    },
+    "keywords": [
+        "wordpress",
+        "theme"
+    ],
+    "author": "Kasmin",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wakamin/selfish/issues"
+    },
+    "homepage": "https://github.com/wakamin/selfish#readme",
+    "dependencies": {
+        "bootstrap": "^4.0.0",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.1"
+    }
+}
