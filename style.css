@@ -11,10 +11,11 @@ Text Domain: selfish
 Tags: custom-background, custom-logo, custom-menu, featured-images
 
 */
+
 body {
-	font-family: 'Libre Franklin', sans-serif;
-	font-size: 14px;
-	color: #20303c;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    color: #20303c;
 }
 
 h1 a,
@@ -29,7 +30,7 @@ h5 a,
 h5 a:hover,
 h6 a,
 h6 a:hover {
-	color: inherit;
+    color: inherit;
 }
 
 h1,
@@ -38,245 +39,325 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 a {
-	color: #279FCD;
-	text-decoration: none;
+    color: #279FCD;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .entry-content a:hover,
 .entry-footer a:hover,
-.entry-meta a:hover {
-	color: #279FCD;
-	padding-bottom: 1px;
-	border-bottom: 1px solid #279FCD;
+.entry-meta a:hover,
+#secondary li a:hover {
+    color: #279FCD;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #279FCD;
 }
 
 a.excerpt-link-wrapper,
 a.excerpt-link-wrapper:hover {
-	color: inherit;
+    color: inherit;
 }
 
 .h1,
 h1 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 .h2,
 h2 {
-	font-size: 22px;
+    font-size: 22px;
 }
 
 .h3,
 h3 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .h4,
 h4 {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 .h5,
 h6 {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .h6,
 h6 {
-	font-size: 14px;
+    font-size: 14px;
 }
+
+.search-form .input-group {
+    margin-bottom: 0 !important;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	clip-path: none;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
 }
+
 /* Do not show the outline on the skip link target. */
+
 #content[tabindex="-1"]:focus {
-	outline: 0;
+    outline: 0;
 }
+
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+    display: block;
 }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
+
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
-	/* Theme Footer (when set to scrolling) */
-	display: none;
+    /* Theme Footer (when set to scrolling) */
+    display: none;
 }
+
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
 .infinity-end.neverending .site-footer {
-	display: block;
+    display: block;
 }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+
 .comment-content .wp-smiley,
 .entry-content .wp-smiley,
 .page-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }
+
 /* Make sure embeds and iframes fit their containers. */
+
 embed,
 iframe,
 object {
-	max-width: 100%;
+    max-width: 100%;
 }
+
 /* Make sure logo link wraps around logo image. */
+
 .custom-logo-link {
-	display: inline-block;
+    display: inline-block;
 }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
+
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+    margin-bottom: 1.5em;
+    max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+    margin: 0.8075em 0;
 }
 
 .wp-caption-text {
-	text-align: center;
+    text-align: center;
 }
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
+
 .gallery {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+    max-width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+    max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+    max-width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+    max-width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+    max-width: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+    max-width: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+    max-width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+    max-width: 11.11%;
 }
 
 .gallery-caption {
-	display: block;
+    display: block;
 }
+
 /* ============ Header ========= */
+
 .site-logo {
-	width: 80px;
+    width: 80px;
 }
+
 /* ========== End header ========== */
+
 /* =========== Content ========= */
+
 .post-list article {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
+
 /* =========== End Content ========= */
+
+/* ========== Sidebar ========= */
+
+#secondary section {
+    margin-bottom: 50px;
+}
+
+#secondary .widget-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+    padding-bottom: 15px;
+}
+
+#secondary ul,
+#secondary ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+#secondary li {
+    margin-bottom: 10px;
+}
+
+#secondary li a {
+    color: inherit;
+}
+
+table#wp-calendar {
+    width: 100%;
+}
+
+#wp-calendar thead {
+    border-bottom: 2px solid #e4e4e4;
+}
+
+#wp-calendar tr {
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#wp-calendar th,
+#wp-calendar td {
+    padding: 10px 5px;
+}
+
+/* ========== Sidebar ========= */

@@ -13,7 +13,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'selfish' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'selfish'); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -35,13 +35,13 @@
 							</a>
 						</div>
 						<div class="collapse">
-							<?php if ( is_front_page() && is_home() ) :	?>
-		  						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php if (is_front_page() && is_home()) :    ?>
+		  						<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 		  					<?php else : ?>
-		  						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		  						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
 		  					<?php endif; ?>
-							<?php $selfish_description = get_bloginfo( 'description', 'display' ); ?>
-		  					<?php if ( $selfish_description || is_customize_preview() ) :	?>
+							<?php $selfish_description = get_bloginfo('description', 'display'); ?>
+		  					<?php if ($selfish_description || is_customize_preview()) :    ?>
 		  						<p class="site-description"><?php echo $selfish_description; /* WPCS: xss ok. */ ?></p>
 		  					<?php endif; ?>
 						</div>
@@ -52,19 +52,15 @@
 
 				  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'container' => '',
-							'menu_id'        => 'primary-menu',
-							'menu_class' => 'navbar-nav mr-auto',
-						    'walker' => new Bootstrap_Walker_Nav_Menu()
-						) );
-						?>
-					    <?php //get_search_form() ?>
-						<form class="form-inline my-2 my-lg-0" role="search" method="get" action="<?php echo get_home_url() ?>">
-					    	<input name="s" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-					    </form>
+                        wp_nav_menu(array(
+                            'theme_location' => 'menu-1',
+                            'container' => '',
+                            'menu_id'        => 'primary-menu',
+                            'menu_class' => 'navbar-nav mr-auto',
+                            'walker' => new Bootstrap_Walker_Nav_Menu()
+                        ));
+                        ?>
+					    <?php get_search_form() ?>
 				  </div>
 			  </div>
 			</nav>
