@@ -14,6 +14,7 @@ sans-serif;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Theme styling
 $link: #279FCD;
+$regular_border: #e4e4e4;
 h1 a,
 h1 a:hover,
 h2 a,
@@ -49,7 +50,8 @@ a:hover {
 .entry-content a:hover,
 .entry-footer a:hover,
 .entry-meta a:hover,
-#secondary li a:hover {
+#secondary li a:hover,
+footer a:hover {
     color: $link;
     padding-bottom: 1px;
     border-bottom: 1px solid $link;
@@ -316,11 +318,11 @@ object {
         text-align: center;
     }
     thead {
-        border-bottom: 2px solid #e4e4e4;
+        border-bottom: 2px solid $regular_border;
     }
     tr {
         text-align: center;
-        border-bottom: 1px solid #e4e4e4;
+        border-bottom: 1px solid $regular_border;
     }
     th,
     td {
@@ -354,6 +356,19 @@ object {
     .sub-menu {
         display: none;
         padding-left: 20px !important;
+    }
+}
+
+#recentcomments {
+    .comment-author-link {
+        font-weight: bold;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $regular_border;
+    }
+    .comment-author-link a:hover {
+        padding-bottom: 5px !important;
+        border-bottom: none !important;
+        color: inherit !important;
     }
 }
 
