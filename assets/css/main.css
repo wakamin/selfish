@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.4;
   color: inherit;
 }
 
@@ -398,25 +398,25 @@ h6, .h6 {
 .display-1 {
   font-size: 6rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .display-3 {
   font-size: 4.5rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 hr {
@@ -8135,7 +8135,9 @@ a:hover {
 .entry-footer a:hover,
 .entry-meta a:hover,
 #secondary li a:hover,
-footer a:hover {
+footer a:hover,
+.post-navigation a:hover,
+#comments a:hover {
   color: #279FCD;
   padding-bottom: 1px;
   border-bottom: 1px solid #279FCD;
@@ -8199,12 +8201,12 @@ a.excerpt-link-wrapper:hover {
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
-  display: inline;
+  float: left;
   margin-right: 1.5em;
 }
 
 .alignright {
-  display: inline;
+  float: right;
   margin-left: 1.5em;
 }
 
@@ -8218,11 +8220,39 @@ a.excerpt-link-wrapper:hover {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
+#comments ol.comment-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#comments ol.comment-list li {
+  margin-bottom: 25px;
+}
+
+#comments ol.comment-list li .comment-content {
+  padding: 20px;
+}
+
+#comments .comment-metadata {
+  margin: 10px 0;
+}
+
+#comments .comment-content {
+  padding: 20px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #fbfbfb;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#comments .comment-content a {
   word-wrap: break-word;
 }
 
-.bypostauthor {
+#comments .bypostauthor {
   display: block;
 }
 
@@ -8356,6 +8386,82 @@ object {
 /* =========== Content ========= */
 .post-list article {
   margin-bottom: 50px;
+}
+
+.single .entry-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.single .post-thumbnail {
+  max-width: 100%;
+}
+
+.single .post-thumbnail img,
+.single .entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.single h4,
+.single h5,
+.single h6 {
+  font-size: 1.1rem;
+}
+
+blockquote {
+  padding: 10px 25px;
+  margin-left: 4%;
+  font-style: italic;
+  font-size: 1.12rem;
+  color: #595d61;
+  line-height: 1.9;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  border-left: 10px solid #e4e4e4;
+}
+
+.post-navigation {
+  height: 50px;
+  padding: 15px 0;
+}
+
+.post-navigation .nav-previous {
+  float: left;
+}
+
+.post-navigation .nav-next {
+  float: right;
+}
+
+.post-navigation .nav-previous:before {
+  content: "\f30a";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.post-navigation .nav-next:after {
+  content: "\f30b";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.tags-links a {
+  background: #efefef;
+  border-radius: 3px;
+  margin: 0 5px;
+  color: inherit;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+}
+
+.tags-links a:hover {
+  border-bottom: none;
+  color: inherit;
+  background: #d6d5d5;
 }
 
 /* =========== End Content ========= */

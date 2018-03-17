@@ -10,45 +10,55 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header container mb-4">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 m-auto">
+                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
-    <div class="row">
-        <div class="<?php echo (has_post_thumbnail()) ? 'col-8' : 'col-12' ?>">
-            <header class="entry-header">
-                <?php
-                if (is_singular()) :
-                    the_title('<h1 class="entry-title">', '</h1>');
-                else :
-                    the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" title="' . get_the_title() . '" rel="bookmark">', '</a></h2>');
-                endif;
-
-                if ('post' === get_post_type()) :
-                    ?>
-                <?php endif; ?>
-            </header><!-- .entry-header -->
-
-            <div class="entry-content">
-                <a href="<?php esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>" class="excerpt-link-wrapper">
-                    <?php the_excerpt() ?>
-                </a>
-            </div><!-- .entry-content -->
-
-            <footer class="entry-footer">
                 <div class="entry-meta">
                     <?php
-                    selfish_posted_on();
-                    selfish_posted_by();
+                        selfish_posted_on();
+                        selfish_posted_by();
                     ?>
                 </div><!-- .entry-meta -->
-                <?php selfish_entry_footer(); ?>
-            </footer><!-- .entry-footer -->
-        </div>
-        <?php if (has_post_thumbnail()): ?>
-            <div class="col-4">
-                <a href="<?php esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo get_the_title() ?>" class="img-fluid">
-                </a>
             </div>
-        <?php endif; ?>
-    </div>
+        </div>
+	</header><!-- .entry-header -->
 
+   	<?php selfish_post_thumbnail(); ?>
+
+       <div class="entry-content container border-bottom mb-4">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 m-auto">
+                <?php
+                the_content(sprintf(
+                    wp_kses(
+                        /* translators: %s: Name of current post. Only visible to screen readers */
+                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'selfish'),
+                        array(
+                            'span' => array(
+                                'class' => array(),
+                            ),
+                        )
+                    ),
+                    get_the_title()
+                ));
+
+                wp_link_pages(array(
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'selfish'),
+                    'after'  => '</div>',
+                ));
+                ?>
+            </div>
+        </div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 m-auto">
+                 <?php selfish_entry_footer(); ?>
+            </div>
+        </div>
+    </footer><!-- .entry-footer -->
+    
 </article><!-- #post-<?php the_ID(); ?> -->
