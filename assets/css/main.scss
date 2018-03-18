@@ -332,13 +332,51 @@ object {
 
 /* ============ Header ========= */
 
-.site-logo {
-    width: 80px;
+#top-header {
+    height: 100px;
+    .site-logo {
+        vertical-align: middle;
+        line-height: 100px;
+    }
+    .site-logo img {
+        max-height: 50px;
+    }
+    .name-desc {
+        padding: 13px 0px;
+    }
+    h1,
+    .site-title {
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+}
+
+#masthead {
+    .top-nav {
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+        border-top: 1px solid #efefef;
+        .dropdown-menu {
+            margin-top: 0;
+        }
+    }
+    .navbar-brand {
+        color: inherit;
+        .site-logo {
+            width: 80px;
+        }
+    }
 }
 
 /* ========== End header ========== */
 
 /* =========== Content ========= */
+
+body.mobile #page {
+    margin-top: 85px;
+}
 
 .post-list article {
     margin-bottom: 50px;

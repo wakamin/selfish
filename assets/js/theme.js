@@ -12,4 +12,35 @@ $(document).ready(function () {
     $('#fake-comment').click(function () {
         show_comment_form();
     });
+
+    function scrollTop() {
+        return $(window).scrollTop()
+    }
+
+    if ($(window).width() > 768) {
+        $(window).scroll(function () {
+            if (scrollTop() > 100) {
+                $('.top-nav').addClass('fixed-top');
+                $('.navbar-brand').removeClass('d-lg-none');
+            } else {
+                $('.top-nav').removeClass('fixed-top');
+                $('.navbar-brand').addClass('d-lg-none');
+            }
+
+        })
+    } else {
+        $('body').addClass('mobile');
+        $('.top-nav').addClass('fixed-top');
+    }
+
+    if ($(window).width() > 768) {
+        $('.nav-item.dropdown').mouseover(function () {
+            $(this).addClass('show')
+            $(this).children('.dropdown-menu').addClass('show')
+        });
+        $('.nav-item.dropdown').mouseout(function () {
+            $(this).removeClass('show')
+            $(this).children('.dropdown-menu').removeClass('show')
+        });
+    }
 });
