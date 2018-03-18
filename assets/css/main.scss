@@ -11,8 +11,8 @@ $h6-font-size: $font-size-base !default;
 $font-family-base: 'Libre Franklin',
 sans-serif;
 $headings-line-height: 1.4;
-$single_post_font_size: 1.1rem;
-$single_post_line_height: 1.8;
+$single_post_font_size: 1.05rem;
+$single_post_line_height: 1.75;
 // Bootstrap import
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Theme styling
@@ -145,6 +145,25 @@ a.excerpt-link-wrapper:hover {
 --------------------------------------------------------------*/
 
 #comments {
+    #fake-comment {
+        width: 100%;
+        display: block;
+        height: 60px;
+        padding: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #afafaf;
+        cursor: text;
+    }
+    #respond {
+        margin-bottom: 20px;
+        form {
+            display: none;
+        }
+    }
+    .comment-form label {
+        text-transform: uppercase;
+    }
     ol.comment-list {
         list-style: none;
         padding-left: 0;
@@ -165,14 +184,33 @@ a.excerpt-link-wrapper:hover {
         margin-top: 10px;
         margin-bottom: 10px;
         background: #fbfbfb;
-        font-size: $single_post_font_size;
-        line-height: $single_post_line_height;
+        font-size: 1rem;
+        line-height: 1.5;
     }
     .comment-content a {
         word-wrap: break-word;
     }
     .bypostauthor {
         display: block;
+    }
+    .comment-author {
+        a {
+            color: inherit;
+            font-weight: bold;
+            padding-bottom: 1px;
+            border-bottom: 1px solid $regular_border;
+        }
+        a:hover {
+            padding-bottom: 5px !important;
+            border-bottom: none !important;
+            color: inherit !important;
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+    .comment-metadata a {
+        color: inherit;
     }
 }
 
@@ -327,6 +365,7 @@ object {
     .entry-content img {
         max-width: 100%;
         height: auto;
+        margin-bottom: 10px;
     }
     h4,
     h5,
@@ -339,13 +378,14 @@ blockquote {
     padding: 10px 25px;
     margin-left: 4%;
     font-style: italic;
-    font-size: 1.12rem;
+    font-size: 1.1rem;
     color: #595d61;
     line-height: 1.9;
     border-top: 1px solid $regular_border;
     border-bottom: 1px solid $regular_border;
     border-right: 1px solid $regular_border;
     border-left: 10px solid $regular_border;
+    clear: both;
 }
 
 .post-navigation {
@@ -377,13 +417,14 @@ blockquote {
         border-radius: 3px;
         margin: 0 5px;
         color: inherit;
-        padding: 3px 10px;
+        padding: 5px 10px;
         font-size: 0.8rem;
     }
     a:hover {
         border-bottom: none;
         color: inherit;
         background: #d6d5d5;
+        padding-bottom: 5px;
     }
 }
 
