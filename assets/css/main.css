@@ -8424,17 +8424,21 @@ object {
   margin-bottom: 50px;
 }
 
-.single .entry-content {
+.single .entry-content,
+.page .entry-content {
   font-size: 1.05rem;
   line-height: 1.75;
 }
 
-.single .post-thumbnail {
+.single .post-thumbnail,
+.page .post-thumbnail {
   max-width: 100%;
 }
 
 .single .post-thumbnail img,
-.single .entry-content img {
+.single .entry-content img,
+.page .post-thumbnail img,
+.page .entry-content img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -8442,7 +8446,10 @@ object {
 
 .single h4,
 .single h5,
-.single h6 {
+.single h6,
+.page h4,
+.page h5,
+.page h6 {
   font-size: 1.1rem;
 }
 
