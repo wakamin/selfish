@@ -1,0 +1,595 @@
+// Theme color
+$theme-colors: ( "primary": #006891);
+// Font
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 1.75 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.25 !default;
+$h4-font-size: $font-size-base * 1.1 !default;
+$h5-font-size: $font-size-base * 1 !default;
+$h6-font-size: $font-size-base !default;
+$font-family-base: 'Karma',
+serif;
+$headings-line-height: 1.4;
+$content_font_size: 1.1rem;
+$content_line_height: 1.75;
+// Forms and border
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+// Bootstrap import
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// Theme styling
+$link: #279FCD;
+$regular_border: #e4e4e4;
+h1 a,
+h1 a:hover,
+h2 a,
+h2 a:hover,
+h3 a,
+h3 a:hover,
+h4 a,
+h4 a:hover,
+h5 a,
+h5 a:hover,
+h6 a,
+h6 a:hover {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+a {
+    color: $link;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.entry-content a:hover,
+.entry-footer a:hover,
+.entry-meta a:hover,
+#secondary li a:hover,
+footer a:hover,
+.post-navigation a:hover,
+#comments a:hover {
+    color: $link;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $link;
+}
+
+a.excerpt-link-wrapper,
+a.excerpt-link-wrapper:hover {
+    color: inherit;
+}
+
+.search-form {
+    .input-group {
+        margin-bottom: 0 !important;
+    }
+    .form-control {
+        border: 1px solid #828282;
+    }
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+#comments {
+    #fake-comment {
+        width: 100%;
+        display: block;
+        height: 60px;
+        padding: 18px;
+        border: 1px solid #ccc;
+        color: #afafaf;
+        cursor: text;
+    }
+    #respond {
+        margin-bottom: 20px;
+        form {
+            display: none;
+        }
+    }
+    .comment-form label {
+        text-transform: uppercase;
+    }
+    ol.comment-list {
+        list-style: none;
+        padding-left: 0;
+        li {
+            margin-bottom: 25px;
+            .comment-content {
+                padding: 20px;
+            }
+        }
+    }
+    .comment-metadata {
+        margin: 10px 0;
+    }
+    .comment-content {
+        padding: 20px;
+        border: 1px solid $regular_border;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #fbfbfb;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .comment-content a {
+        word-wrap: break-word;
+    }
+    .bypostauthor {
+        display: block;
+    }
+    .comment-author {
+        a {
+            color: inherit;
+            font-weight: bold;
+            padding-bottom: 1px;
+            border-bottom: 1px solid $regular_border;
+        }
+        a:hover {
+            padding-bottom: 5px !important;
+            border-bottom: none !important;
+            color: inherit !important;
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+    .comment-metadata a {
+        color: inherit;
+    }
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.comment-content .wp-smiley,
+.entry-content .wp-smiley,
+.page-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+
+.custom-logo-link {
+    display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+    max-width: 100%;
+    .wp-caption-text {
+        text-align: center;
+        font-size: 0.8rem;
+        border-top: 1px solid #ccc;
+        padding-top: 5px;
+    }
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+    margin-bottom: 1.5em;
+    figure {
+        margin-bottom: 0;
+    }
+    .gallery-item {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        width: 100%;
+        padding: 5px;
+    }
+    .gallery-caption {
+        display: block;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+/* ============ Header ========= */
+
+#top-header {
+    height: 100px;
+    width: 100%;
+    .site-logo {
+        vertical-align: middle;
+        line-height: 100px;
+    }
+    .site-logo img {
+        max-height: 50px;
+    }
+    .name-desc {
+        padding: 15px 0px;
+    }
+    .site-logo.contain-image,
+    .name-desc.contain-image {
+        margin-top: -100px;
+    }
+    h1,
+    .site-title {
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    #header-image {
+        width: 100%;
+        overflow: hidden;
+        height: 100px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#masthead {
+    .top-nav {
+        border-top: 2px solid #b7b7b7;
+        border-bottom: 2px solid #b7b7b7;
+        background: #f9f9f9;
+        a {
+            text-transform: uppercase;
+            color: #191919;
+            font-weight: bold;
+        }
+        .dropdown-menu {
+            margin-top: 0;
+        }
+    }
+    .top-nav.fixed-top {
+        border-top: none;
+        border-bottom: none;
+        box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.21);
+    }
+    .navbar-brand {
+        color: inherit;
+        .site-logo {
+            width: 80px;
+        }
+    }
+}
+
+/* ========== End header ========== */
+
+/* =========== Content ========= */
+
+body.mobile #page {
+    margin-top: 85px;
+}
+
+.post-list article {
+    margin-bottom: 50px;
+}
+
+.single,
+.page {
+    .entry-content {
+        font-size: $content_font_size;
+        line-height: $content_line_height;
+    }
+    .post-thumbnail {
+        max-width: 100%;
+    }
+    .post-thumbnail img,
+    .entry-content img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    h4,
+    h5,
+    h6 {
+        font-size: 1.1rem;
+    }
+}
+
+blockquote {
+    padding: 10px 25px;
+    margin-left: 4%;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #595d61;
+    line-height: 1.9;
+    border-top: 1px solid $regular_border;
+    border-bottom: 1px solid $regular_border;
+    border-right: 1px solid $regular_border;
+    border-left: 10px solid $regular_border;
+    clear: both;
+}
+
+.post-navigation {
+    height: 50px;
+    padding: 15px 0;
+    .nav-previous {
+        float: left;
+    }
+    .nav-next {
+        float: right;
+    }
+    .nav-previous:before {
+        content: "\f30a";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 10px;
+    }
+    .nav-next:after {
+        content: "\f30b";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-left: 10px;
+    }
+}
+
+.tags-links {
+    a {
+        background: #efefef;
+        border-radius: 3px;
+        margin: 0 5px;
+        color: inherit;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    a:hover {
+        border-bottom: none;
+        color: inherit;
+        background: #d6d5d5;
+        padding-bottom: 5px;
+    }
+}
+
+/* =========== End Content ========= */
+
+/* ========== Sidebar ========= */
+
+#secondary {
+    section {
+        margin-bottom: 50px;
+    }
+    .widget-title {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+        padding-bottom: 15px;
+    }
+    ul,
+    ol {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    li a {
+        color: inherit;
+    }
+}
+
+#wp-calendar {
+    width: 100%;
+    caption {
+        caption-side: top;
+        text-align: center;
+    }
+    thead {
+        border-bottom: 2px solid $regular_border;
+    }
+    tr {
+        text-align: center;
+        border-bottom: 1px solid $regular_border;
+    }
+    th,
+    td {
+        padding: 10px 5px;
+    }
+}
+
+.widget_nav_menu {
+    ul li a {
+        width: 100%;
+        display: block;
+        padding: 5px 10px;
+    }
+    ul li.menu-item-has-children:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f107";
+        float: right;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    ul li a:hover {
+        padding-bottom: 5px !important;
+        border-bottom: none !important;
+        background: #f5f5f5;
+        color: inherit !important;
+    }
+    ul li.menu-item-has-children:hover>.sub-menu {
+        display: block;
+    }
+    .sub-menu {
+        display: none;
+        padding-left: 20px !important;
+    }
+}
+
+#recentcomments {
+    .comment-author-link {
+        font-weight: bold;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $regular_border;
+    }
+    .comment-author-link a:hover {
+        padding-bottom: 5px !important;
+        border-bottom: none !important;
+        color: inherit !important;
+    }
+}
+
+/* ========== End Sidebar ========= */
+
+/* ========== Footer ========= */
+
+footer.site-footer {
+    border-top: 2px solid #b7b7b7;
+    .site-info {
+        font-size: 0.8rem;
+        color: #777;
+    }
+}
+
+#footer-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* ========== End Footer ========= */
