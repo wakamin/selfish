@@ -8674,5 +8674,21 @@ blockquote {
   color: inherit !important;
 }
 
-/* ========== Sidebar ========= */
+/* ========== End Sidebar ========= */
+/* ========== Footer ========= */
+footer.site-footer {
+  border-top: 2px solid #b7b7b7;
+}
+
+footer.site-footer .site-info {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+#footer-menu li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* ========== End Footer ========= */
 /*# sourceMappingURL=main.css.map */

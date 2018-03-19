@@ -71,9 +71,9 @@
 				  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<?php
                         wp_nav_menu(array(
-                            'theme_location' => 'menu-1',
+                            'theme_location' => 'top-nav-menu',
                             'container' => '',
-                            'menu_id'        => 'primary-menu',
+                            'menu_id'        => 'top-nav-menu',
                             'menu_class' => 'navbar-nav mr-auto',
                             'walker' => new Bootstrap_Walker_Nav_Menu()
                         ));

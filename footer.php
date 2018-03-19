@@ -13,7 +13,15 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer text-center bg-light border-top py-4">
+	<footer id="colophon" class="site-footer text-center bg-light py-4">
+        <?php
+            wp_nav_menu(array(
+                'container' => '',
+                'theme_location' => 'footer-menu',
+                'menu_id'        => 'footer-menu',
+                'menu_class' => 'list-inline',
+            ));
+        ?>
 		<div class="site-info">
             Copyright <i class="far fa-copyright"></i> <?php echo date('Y') ?> <strong><?php echo bloginfo('name') ?></strong>
 			<span class="sep"> | </span>
