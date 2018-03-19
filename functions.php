@@ -168,6 +168,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/nav-menu-walker.php';
 
 /**
+ * Breadcrumb.
+ */
+require get_template_directory() . '/inc/breadcrumb.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {

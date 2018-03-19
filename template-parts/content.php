@@ -13,6 +13,10 @@
 	<header class="entry-header container mb-4">
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 m-auto">
+                <?php if (is_singular()): ?>
+                    <?php selfish_breadcrumb() ?>
+                <?php endif; ?>
+
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
                 <div class="entry-meta">

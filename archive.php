@@ -14,6 +14,8 @@ get_header();
         <div class="row">
 
             <main id="main" class="site-main col-md-9">
+                <?php selfish_breadcrumb() ?>
+                
                 <div class="post-list">
 
                     <?php if (have_posts()) : ?>

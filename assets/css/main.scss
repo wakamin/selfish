@@ -2,12 +2,12 @@
 $theme-colors: ( "primary": #006891);
 // Font
 $font-size-base: 1rem;
-$h1-font-size: $font-size-base * 1.75 !default;
-$h2-font-size: $font-size-base * 1.5 !default;
-$h3-font-size: $font-size-base * 1.25 !default;
-$h4-font-size: $font-size-base * 1.1 !default;
-$h5-font-size: $font-size-base * 1 !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: $font-size-base * 1.75;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.25;
+$h4-font-size: $font-size-base * 1.1;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base;
 $font-family-base: 'Karma',
 serif;
 $headings-line-height: 1.4;
@@ -17,6 +17,9 @@ $content_line_height: 1.75;
 $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
+// Breadcrumbs
+$breadcrumb-padding-x : 0;
+$breadcrumb-bg : none;
 // Bootstrap import
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Theme styling
