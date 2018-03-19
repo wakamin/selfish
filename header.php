@@ -25,22 +25,27 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'selfish'); ?></a>
 
 	<header id="masthead" class="site-header">
-        <div id="top-header" class="container-fluid d-none d-lg-inline-block text-center">
+        <div id="top-header" class="d-inline-block text-center">
+            <?php if (get_header_image()) : ?>
+                <div id="header-image">
+                    <img src="<?php header_image(); ?>"  height="100px" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+                </div>
+            <?php endif; ?>
             <?php if (site_logo_url() != ''): ?>
-                <div class="site-logo">
+                <div class="site-logo <?php echo (get_header_image()) ? 'contain-image' : '' ?>">
                     <a href="<?php echo get_home_url() ?>" title="<?php echo bloginfo('name') ?>">
                         <img src="<?php echo site_logo_url() ?>" alt="<?php echo bloginfo('name') ?>" class="img-fluid">
                     </a>
                 </div>
             <?php endif; ?>
-            <div class="name-desc <?php echo (site_logo_url() != '') ? 'collapse' : '' ?>">
-                <?php if (is_front_page() && is_home()) :    ?>
+            <div class="name-desc <?php echo (get_header_image()) ? 'contain-image' : '' ?>">
+                <?php if (is_front_page() && is_home()) : ?>
                     <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                 <?php else : ?>
                     <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
                 <?php endif; ?>
                 <?php $selfish_description = get_bloginfo('description', 'display'); ?>
-                <?php if ($selfish_description || is_customize_preview()) :    ?>
+                <?php if ($selfish_description || is_customize_preview()) : ?>
                     <p class="site-description"><?php echo $selfish_description; /* WPCS: xss ok. */ ?></p>
                 <?php endif; ?>
             </div>

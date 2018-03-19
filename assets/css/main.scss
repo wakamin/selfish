@@ -334,6 +334,7 @@ object {
 
 #top-header {
     height: 100px;
+    width: 100%;
     .site-logo {
         vertical-align: middle;
         line-height: 100px;
@@ -342,7 +343,11 @@ object {
         max-height: 50px;
     }
     .name-desc {
-        padding: 13px 0px;
+        padding: 15px 0px;
+    }
+    .site-logo.contain-image,
+    .name-desc.contain-image {
+        margin-top: -100px;
     }
     h1,
     .site-title {
@@ -351,6 +356,14 @@ object {
         margin-bottom: 5px;
         font-weight: bold;
         margin-top: 5px;
+    }
+    #header-image {
+        width: 100%;
+        overflow: hidden;
+        height: 100px;
+        img {
+            width: 100%;
+        }
     }
 }
 

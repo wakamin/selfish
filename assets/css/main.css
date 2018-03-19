@@ -8416,6 +8416,7 @@ object {
 /* ============ Header ========= */
 #top-header {
   height: 100px;
+  width: 100%;
 }
 
 #top-header .site-logo {
@@ -8428,7 +8429,12 @@ object {
 }
 
 #top-header .name-desc {
-  padding: 13px 0px;
+  padding: 15px 0px;
+}
+
+#top-header .site-logo.contain-image,
+#top-header .name-desc.contain-image {
+  margin-top: -100px;
 }
 
 #top-header h1,
@@ -8438,6 +8444,16 @@ object {
   margin-bottom: 5px;
   font-weight: bold;
   margin-top: 5px;
+}
+
+#top-header #header-image {
+  width: 100%;
+  overflow: hidden;
+  height: 100px;
+}
+
+#top-header #header-image img {
+  width: 100%;
 }
 
 #masthead .top-nav {
