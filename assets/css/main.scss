@@ -1,17 +1,17 @@
 // Theme color
 $theme-colors: ( "primary": #006891);
 // Font
-$font-size-base: 0.9rem;
+$font-size-base: 1rem;
 $h1-font-size: $font-size-base * 1.75 !default;
 $h2-font-size: $font-size-base * 1.5 !default;
 $h3-font-size: $font-size-base * 1.25 !default;
 $h4-font-size: $font-size-base * 1.1 !default;
 $h5-font-size: $font-size-base * 1 !default;
 $h6-font-size: $font-size-base !default;
-$font-family-base: 'Libre Franklin',
-sans-serif;
+$font-family-base: 'Karma',
+serif;
 $headings-line-height: 1.4;
-$content_font_size: 1.05rem;
+$content_font_size: 1.1rem;
 $content_line_height: 1.75;
 // Forms and border
 $border-radius: 0;
@@ -382,6 +382,7 @@ object {
         a {
             text-transform: uppercase;
             color: #191919;
+            font-weight: bold;
         }
         .dropdown-menu {
             margin-top: 0;
