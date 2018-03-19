@@ -39,7 +39,7 @@
                     selfish_posted_by();
                     ?>
                 </div><!-- .entry-meta -->
-                <?php selfish_entry_footer(); ?>
+                <?php // selfish_entry_footer();?>
             </footer><!-- .entry-footer -->
         </div>
         <?php if (has_post_thumbnail()): ?>
