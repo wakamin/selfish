@@ -18,8 +18,8 @@ $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
 // Breadcrumbs
-$breadcrumb-padding-x : 0;
-$breadcrumb-bg : none;
+$breadcrumb-padding-x: 0;
+$breadcrumb-bg: none;
 // Bootstrap import
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Theme styling
@@ -80,6 +80,12 @@ a.excerpt-link-wrapper:hover {
     }
     .form-control {
         border: 1px solid #828282;
+    }
+}
+
+.breadcrumb {
+    a {
+        color: inherit;
     }
 }
 

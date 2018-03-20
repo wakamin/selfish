@@ -18,6 +18,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+    <?php selfish_json_ld() ?>
 </head>
 
 <body <?php body_class(); ?>>

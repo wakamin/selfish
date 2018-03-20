@@ -173,6 +173,11 @@ require get_template_directory() . '/inc/nav-menu-walker.php';
 require get_template_directory() . '/inc/breadcrumb.php';
 
 /**
+ * Json-ld.
+ */
+require get_template_directory() . '/inc/json-ld.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
