@@ -406,6 +406,12 @@ object {
         .dropdown-menu {
             margin-top: 0;
         }
+        @media (min-width: 992px) {
+            .nav-link {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
     }
     .top-nav.fixed-top {
         border-top: none;

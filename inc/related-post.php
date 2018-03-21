@@ -39,7 +39,7 @@ if (! function_exists('selfish_related_post')) :
          $year = get_the_date('Y', $post);
          $date_archive_link = get_day_link($year, $month, $date); ?>
 
-                            <div class="col-12 col-sm-6 col-md-3">
+                            <div class="col-12 col-sm-6 col-md-3 my-3 my-md-0">
                                 <div class="card">
                                     <?php if (has_post_thumbnail($post)): ?>
                                         <a href="<?php echo get_the_permalink($post) ?>" title="<?php echo get_the_title($post) ?>">

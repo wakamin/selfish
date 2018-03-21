@@ -8488,6 +8488,13 @@ object {
   margin-top: 0;
 }
 
+@media (min-width: 992px) {
+  #masthead .top-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
 #masthead .top-nav.fixed-top {
   border-top: none;
   border-bottom: none;
