@@ -27,7 +27,7 @@
             </header><!-- .entry-header -->
 
             <div class="entry-content">
-                <a href="<?php esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>" class="excerpt-link-wrapper">
+                <a href="<?php echo esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>" class="excerpt-link-wrapper">
                     <?php the_excerpt() ?>
                 </a>
             </div><!-- .entry-content -->
@@ -44,7 +44,7 @@
         </div>
         <?php if (has_post_thumbnail()): ?>
             <div class="col-4">
-                <a href="<?php esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>">
+                <a href="<?php echo esc_url(get_permalink()) ?>" title="<?php echo get_the_title() ?>">
                     <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo get_the_title() ?>" class="img-fluid">
                 </a>
             </div>
