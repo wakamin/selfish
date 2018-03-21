@@ -8,7 +8,7 @@ if (! function_exists('selfish_json_ld')) :
     
      function selfish_json_ld()
      {
-         if (is_single()) :
+         if (is_single() && esc_attr(get_option('json_ld')) == 'yes') :
             global $post;
 
          $excerpt = $post->post_excerpt;

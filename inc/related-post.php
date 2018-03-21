@@ -8,7 +8,7 @@ if (! function_exists('selfish_related_post')) :
     
      function selfish_related_post()
      {
-         if (is_single()):
+         if (is_single() && esc_attr(get_option('related_post')) == 'yes'):
             $cats = array_values(get_the_category());
             // Get last category post is in
             $last_category = end($cats);

@@ -183,3 +183,9 @@ require get_template_directory() . '/inc/related-post.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Theme options
+ */
+
+ require get_template_directory() . '/inc/options.php';
