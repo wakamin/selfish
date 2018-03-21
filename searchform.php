@@ -2,7 +2,7 @@
     <div class="input-group mb-3">
         <input name="s" class="form-control" type="search" placeholder="Search" aria-label="Search" value="<?php echo (isset($_GET['s'])) ?  $_GET['s'] : '' ?>">
         <div class="input-group-append">
-            <button type="submit" class="btn btn-outline-primary" type="button"><i class="fas fa-search"></i></button>
+            <button type="submit" class="btn btn-outline-primary"><i class="fas fa-search"></i></button>
         </div>
     </div>
 </form>
