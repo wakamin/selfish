@@ -1,7 +1,5 @@
 <?php
 
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
 if (! function_exists('selfish_json_ld')) :
 
     /**
@@ -21,22 +19,22 @@ if (! function_exists('selfish_json_ld')) :
          $headline = get_the_title();
          $description = $excerpt;
 
-         if (is_plugin_active( 'all-in-one-seo-pack/all_in_one_seo_pack.php' )) {
-            if (get_post_meta($post->ID, '_aioseop_title', true) != '') {
-                $headline = get_post_meta($post->ID, '_aioseop_title', true);
-            }
-            if (get_post_meta($post->ID, '_aioseop_description', true) != '') {
-                $description = get_post_meta($post->ID, '_aioseop_description', true);
-            }      
+         if (is_plugin_active('all-in-one-seo-pack/all_in_one_seo_pack.php')) {
+             if (get_post_meta($post->ID, '_aioseop_title', true) != '') {
+                 $headline = get_post_meta($post->ID, '_aioseop_title', true);
+             }
+             if (get_post_meta($post->ID, '_aioseop_description', true) != '') {
+                 $description = get_post_meta($post->ID, '_aioseop_description', true);
+             }
          }
 
-         if (is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' )) {
-            if (get_post_meta($post->ID, '_yoast_wpseo_title', true) != '') {
-                $headline = get_post_meta($post->ID, '_yoast_wpseo_title', true);
-            }
-            if (get_post_meta($post->ID, '_yoast_wpseo_metadesc', true) != '') {
-                $description = get_post_meta($post->ID, '_yoast_wpseo_metadesc', true);
-            }      
+         if (is_plugin_active('wordpress-seo/wp-seo.php') || is_plugin_active('wordpress-seo-premium/wp-seo-premium.php')) {
+             if (get_post_meta($post->ID, '_yoast_wpseo_title', true) != '') {
+                 $headline = get_post_meta($post->ID, '_yoast_wpseo_title', true);
+             }
+             if (get_post_meta($post->ID, '_yoast_wpseo_metadesc', true) != '') {
+                 $description = get_post_meta($post->ID, '_yoast_wpseo_metadesc', true);
+             }
          } ?>
 
             <script type="application/ld+json">

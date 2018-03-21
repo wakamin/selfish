@@ -7,6 +7,8 @@
  * @package selfish
  */
 
+include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+
 if (! function_exists('selfish_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -176,6 +178,11 @@ require get_template_directory() . '/inc/breadcrumb.php';
  * Json-ld.
  */
 require get_template_directory() . '/inc/json-ld.php';
+
+/**
+ * Json-ld.
+ */
+require get_template_directory() . '/inc/related-post.php';
 
 /**
  * Load Jetpack compatibility file.

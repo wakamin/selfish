@@ -8131,6 +8131,11 @@ a:hover {
   text-decoration: none;
 }
 
+.form-control,
+.search-form .btn {
+  line-height: 1;
+}
+
 .entry-content a:hover,
 .entry-footer a:hover,
 .entry-meta a:hover,
@@ -8158,6 +8163,11 @@ a.excerpt-link-wrapper:hover {
 
 .breadcrumb a {
   color: inherit;
+}
+
+.section-line {
+  height: 2px;
+  background: #222629;
 }
 
 /*--------------------------------------------------------------
@@ -8586,6 +8596,20 @@ blockquote {
   color: inherit;
   background: #d6d5d5;
   padding-bottom: 5px;
+}
+
+#related-post .card .card-body a {
+  color: inherit;
+}
+
+#related-post .card .card-body .card-title {
+  height: 50px;
+  overflow: hidden;
+}
+
+#related-post .card .card-body .card-text {
+  height: 120px;
+  overflow: hidden;
 }
 
 /* =========== End Content ========= */
