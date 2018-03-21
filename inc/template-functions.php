@@ -58,14 +58,20 @@ function selfish_post_category($post)
     }
 }
 
+add_action('wp', 'selfish_home_style_check');
+function selfish_home_style_check()
+{
+    if (esc_attr(get_option('homepage')) == 'grid' && is_home()) {
+        add_filter('body_class', 'selfish_home_grid_body_class');
+    }
+}
+
 function selfish_home_grid_body_class($classes)
 {
     $classes[] = 'home-grid';
     return $classes;
 }
-if (esc_attr(get_option('homepage')) == 'grid') {
-    add_filter('body_class', 'selfish_home_grid_body_class');
-}
+
 
 function selfish_post_grid_wide($post)
 {

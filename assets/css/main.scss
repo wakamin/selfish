@@ -438,6 +438,11 @@ object {
     .wide {
         height: 250px;
     }
+    @media (max-width: 601px) {
+        .wide {
+            height: 370px;
+        }
+    }
     .tall {
         height: 370px;
     }

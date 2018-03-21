@@ -8520,6 +8520,12 @@ object {
   height: 250px;
 }
 
+@media (max-width: 601px) {
+  #post-grid .wide {
+    height: 370px;
+  }
+}
+
 #post-grid .tall {
   height: 370px;
 }
