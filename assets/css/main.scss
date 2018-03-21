@@ -428,6 +428,45 @@ object {
 
 /* ========== End header ========== */
 
+/* ========== Homepage ============= */
+
+#post-grid {
+    .wide,
+    .tall {
+        overflow: hidden;
+    }
+    .wide {
+        height: 250px;
+    }
+    .tall {
+        height: 370px;
+    }
+    .inner {
+        box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.27);
+        transition: 500ms box-shadow ease;
+    }
+    .inner:hover {
+        box-shadow: none;
+    }
+    .category {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .category,
+    h2 {
+        color: #ffffff;
+        text-shadow: black 0 1px 1px;
+    }
+    button {
+        bottom: 30px;
+        position: absolute;
+        font-weight: bold;
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.27);
+    }
+}
+
+/* ========== End Homepage ============= */
+
 /* =========== Content ========= */
 
 body.mobile #page {

@@ -8510,6 +8510,48 @@ object {
 }
 
 /* ========== End header ========== */
+/* ========== Homepage ============= */
+#post-grid .wide,
+#post-grid .tall {
+  overflow: hidden;
+}
+
+#post-grid .wide {
+  height: 250px;
+}
+
+#post-grid .tall {
+  height: 370px;
+}
+
+#post-grid .inner {
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.27);
+  transition: 500ms box-shadow ease;
+}
+
+#post-grid .inner:hover {
+  box-shadow: none;
+}
+
+#post-grid .category {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#post-grid .category,
+#post-grid h2 {
+  color: #ffffff;
+  text-shadow: black 0 1px 1px;
+}
+
+#post-grid button {
+  bottom: 30px;
+  position: absolute;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.27);
+}
+
+/* ========== End Homepage ============= */
 /* =========== Content ========= */
 body.mobile #page {
   margin-top: 85px;

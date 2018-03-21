@@ -17,28 +17,58 @@ get_header();
 
 	<div id="primary" class="content-area my-4 container">
 		<div class="row">
-			<main id="main" class="site-main col-md-9">
-				<div class="post-list">
 
-					<?php if (have_posts()) : ?>
-
-						<?php while (have_posts()) : ?>
-							<?php the_post(); ?>
-                            <?php get_template_part('template-parts/list'); ?>
-						<?php endwhile; ?>
-
-						<?php the_posts_navigation(); ?>
-					<?php else : ?>
-						<?php get_template_part('template-parts/content', 'none'); ?>
-					<?php endif; ?>
-
-				</div>
-
-			</main><!-- #main -->
-
-			<?php get_sidebar(); ?>
-
-		</row><!-- .row -->
+			<main id="main" class="site-main <?php echo (esc_attr(get_option('homepage') == 'grid')) ? 'col-md-12' : 'col-md-9' ?>">
+                <?php if (esc_attr(get_option('homepage')) == 'grid'): ?>
+                    <div class="section-title mb-4">
+                        <h3><?php _e('Latest Posts', 'selfish') ?></h3>
+                        <div class="section-line w-25 border-dark"></div>
+                    </div>
+                    <div id="post-grid" class="row">
+                        <?php 
+                            $posts = get_posts(array(
+                                'numberposts' => 6,
+                                'post_type' => 'post',
+                                'orderby' => 'date',
+                                'order' => 'DESC'
+                            ));
+                        ?>
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <?php selfish_post_grid_wide($posts[0]) ?>
+                                <?php selfish_post_grid_tall($posts[1]) ?>
+                                <?php selfish_post_grid_tall($posts[2]) ?>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <?php selfish_post_grid_tall($posts[3]) ?>
+                                <?php selfish_post_grid_tall($posts[4]) ?>
+                                <?php selfish_post_grid_wide($posts[5]) ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="post-list">
+                        <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : ?>
+                                <?php the_post(); ?>
+                                <?php get_template_part('template-parts/list'); ?>
+                            <?php endwhile; ?>
+                            <?php the_posts_navigation(); ?>
+                        <?php else : ?>
+                            <?php get_template_part('template-parts/content', 'none'); ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            
+            </main><!-- #main -->
+            
+            <?php if (esc_attr(get_option('homepage')) == 'list'): ?>
+    			<?php get_sidebar(); ?>
+            <?php endif; ?>
+        
+        </row><!-- .row -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -6,6 +6,7 @@ if (is_admin()) {
 
 function register_selfish_settings()
 {
+    register_setting('selfish-options', 'homepage');
     register_setting('selfish-options', 'breadcrumb');
     register_setting('selfish-options', 'json_ld');
     register_setting('selfish-options', 'related_post');
@@ -22,6 +23,14 @@ function selfish_settings()
         <form method="post" action="options.php"> 
             <?php settings_fields('selfish-options') ?>
             <table class="form-table">
+                <tr>
+                    <th scope="row">Homepage Style</th>
+                    <td>
+                        <label><input type="radio" name="homepage" value="grid" <?php echo (esc_attr(get_option('homepage')) == 'grid') ? 'checked' : '' ?>>Grid</label>
+                        <br>
+                        <label><input type="radio" name="homepage" value="list" <?php echo (esc_attr(get_option('homepage')) == 'list') ? 'checked' : '' ?>>List</label>
+                    </td>
+                </tr>
                 <tr>
                     <th scope="row">Enable Breadcrumb</th>
                     <td>
