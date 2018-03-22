@@ -1,18 +1,17 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Selfish 1.0.0\n"
 "POT-Creation-Date: 2018-03-22 10:09+0700\n"
-"PO-Revision-Date: 2018-03-22 08:43+0700\n"
+"PO-Revision-Date: 2018-03-22 10:09+0700\n"
 "Last-Translator: \n"
 "Language-Team: Samudra Digital <admin@samudradigital.com>\n"
-"Language: en_US\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_;esc_html_e;_nx;esc_html;"
 "esc_html_x\n"
@@ -24,175 +23,190 @@ msgstr ""
 
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Halaman tidak ditemukan."
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
-msgstr ""
+msgstr "Tidak ditemukan di halaman ini. Coba link lain dibawah ini atau cari?"
 
 #: 404.php:31
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Kategori Yang Sering Digunakan"
 
 #: 404.php:47
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Coba cari di arsip bulanan. %1$s"
 
 #: comments.php:31
 msgid "Comment"
-msgstr ""
+msgstr "Komentar"
 
 #: comments.php:31
 msgid "Write comment here"
-msgstr ""
+msgstr "Tulis komentar disini"
 
 #: comments.php:33
 msgid "Name"
-msgstr ""
+msgstr "Nama"
 
 #: comments.php:33
 msgid "Your name"
-msgstr ""
+msgstr "Nama Anda"
 
 #: comments.php:34
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: comments.php:35
 msgid "Your Website URL"
-msgstr ""
+msgstr "Alamat Website"
 
 #: comments.php:43
 msgid "Write your comment"
-msgstr ""
+msgstr "Tulis komentar Anda"
 
 #: comments.php:51
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "Satu komentar pada &ldquo;%1$s&rdquo;"
 
 #: comments.php:56
 #, php-format
 msgid "%1$s comments"
-msgstr ""
+msgstr "%1$s komentar"
 
 #: comments.php:80
 msgid "Comments are closed."
-msgstr ""
+msgstr "Komentar ditutup"
 
 #: footer.php:30
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Theme: %1$s oleh %2$s."
 
 #: front-page.php:24
 msgid "Latest Posts"
-msgstr ""
+msgstr "Artikel Terkini"
 
 #: functions.php:50
 msgid "Top Navigation Menu"
-msgstr ""
+msgstr "Top Navigation Menu"
 
 #: functions.php:51
 msgid "Footer Menu"
-msgstr ""
+msgstr "Footer Menu"
 
 #: functions.php:98
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidebar"
 
 #: functions.php:100
 msgid "Add widgets here."
-msgstr ""
+msgstr "Tambah widget disini"
 
 #: header.php:27
 msgid "Skip to content"
-msgstr ""
+msgstr "Lanjut ke konten"
 
 #: inc/breadcrumb.php:17
 msgid "Home"
-msgstr ""
+msgstr "Beranda"
 
 #: inc/related-post.php:26
 msgid "Related Post"
-msgstr ""
+msgstr "Artikel Terkait"
 
 #: inc/related-post.php:60
 msgid "by"
-msgstr ""
+msgstr "oleh"
 
 #: inc/template-functions.php:86 inc/template-functions.php:104
 msgid "Read more"
-msgstr ""
+msgstr "Baca artikel"
 
 #: inc/template-tags.php:30
 #, php-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #: inc/template-tags.php:46
 msgid " by "
-msgstr ""
+msgstr " oleh "
 
 #: inc/template-tags.php:62
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: inc/template-tags.php:65
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Diposting di %1$s"
 
 #: inc/template-tags.php:72
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Tag %1$s"
 
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Berikan Komentar <span class=\"screen-reader-text\"> pada %s</span>"
 
 #: inc/template-tags.php:101
 #, php-format
 msgid "Edit <div class=\"screen-reader-text\">%s</div>"
-msgstr ""
+msgstr "Edit <div class=\"screen-reader-text\">%s</div>"
 
 #: search.php:23
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Hasil Pencarian: %s"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Tidak Ditemukan"
 
 #: template-parts/content-none.php:25
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Siap mempublikasikan posting pertama Anda? <a href=\"%1$s\">Mulai disini</a>."
 
 #: template-parts/content-none.php:40
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Maaf, tidak ditemukan hasil yang sesuai dengan pencarian Anda. Coba lagi "
+"dengan kata kunci lain."
 
 #: template-parts/content-none.php:47
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Tidak dapat menemukan. Mungkin melakukan pencarian dapat membantu."
 
 #: template-parts/content.php:41
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Lanjut baca<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content.php:52
 msgid "Pages:"
-msgstr ""
+msgstr "Halaman:"
+
+#~ msgid " by %s"
+#~ msgstr " oleh %s"
+
+#~ msgid "by %1$s"
+#~ msgstr "oleh %1$s"
+
+#~ msgid "by %s"
+#~ msgstr "oleh %s"
+
+#~ msgid "%1$s comment"
+#~ msgstr "%1$s komentar"

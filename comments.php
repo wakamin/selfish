@@ -48,15 +48,13 @@ if (post_password_required()) {
             $selfish_comment_count = get_comments_number();
             if ('1' === $selfish_comment_count) {
                 printf(
-                    /* translators: 1: title. */
                     esc_html__('One thought on &ldquo;%1$s&rdquo;', 'selfish'),
                     '<span>' . get_the_title() . '</span>'
                 );
             } else {
-                printf(// WPCS: XSS OK.
-                    /* translators: 1: comment count number, 2: title. */
-                    esc_html(_nx('%1$s comment', '%1$s comments', $selfish_comment_count, 'comments title', 'selfish')),
-                    number_format_i18n($selfish_comment_count)
+                printf(
+                    esc_html__('%1$s comments', 'selfish'),
+                    $selfish_comment_count
                 );
             }
             ?>
