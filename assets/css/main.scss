@@ -100,6 +100,37 @@ a.excerpt-link-wrapper:hover {
     background: #222629;
 }
 
+pre {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    overflow: auto;
+    font-size: 12px;
+    line-height: 20px;
+    background: #f1f1f1;
+    border: 1px solid #b1b1b1;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: $spacer;
+    background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+    th,
+    td {
+        padding: $table-cell-padding;
+        vertical-align: top;
+        border-top: $table-border-width solid $table-border-color;
+    }
+    thead th {
+        vertical-align: bottom;
+        border-bottom: (2 * $table-border-width) solid $table-border-color;
+    }
+    tbody+tbody {
+        border-top: (2 * $table-border-width) solid $table-border-color;
+    }
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -202,6 +233,9 @@ a.excerpt-link-wrapper:hover {
             }
         }
     }
+    ol.children {
+        list-style: none;
+    }
     .comment-metadata {
         margin: 10px 0;
     }
@@ -292,12 +326,13 @@ object {
 
 .wp-caption {
     max-width: 100%;
-    .wp-caption-text {
-        text-align: center;
-        font-size: 0.8rem;
-        border-top: 1px solid #ccc;
-        padding-top: 5px;
-    }
+}
+
+.wp-caption-text {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -546,10 +581,11 @@ blockquote {
     a {
         background: #efefef;
         border-radius: 3px;
-        margin: 0 5px;
+        margin: 5px;
         color: inherit;
         padding: 5px 10px;
         font-size: 0.8rem;
+        display: inline-block;
     }
     a:hover {
         border-bottom: none;

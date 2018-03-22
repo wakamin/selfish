@@ -40,8 +40,10 @@ if (post_password_required()) {
     comment_form($comments_args);
     ?>
 
-    <div id="fake-comment" class="mb-4"><?php _e('Write your comment', 'selfish') ?></div> 
-    
+    <?php if (comments_open()): ?>
+        <div id="fake-comment" class="mb-4"><?php _e('Write your comment', 'selfish') ?></div> 
+    <?php endif; ?>
+
     <?php if (have_comments()) : ?>
 		<h2 class="comments-title border-bottom py-1 mb-4">
 			<?php
