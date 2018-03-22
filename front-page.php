@@ -18,8 +18,8 @@ get_header();
 	<div id="primary" class="content-area my-4 container">
 		<div class="row">
 
-			<main id="main" class="site-main <?php echo (esc_attr(get_option('homepage') == 'grid')) ? 'col-md-12' : 'col-md-9' ?>">
-                <?php if (esc_attr(get_option('homepage')) == 'grid'): ?>
+			<main id="main" class="site-main <?php echo (esc_attr(get_option('homepage') == 'grid') || get_option('show_on_front') == 'page') ? 'col-md-12' : 'col-md-9' ?>">
+                <?php if (esc_attr(get_option('homepage')) == 'grid' && get_option('show_on_front') != 'page'): ?>
                     <div class="section-title mb-4">
                         <h3><?php _e('Latest Posts', 'selfish') ?></h3>
                         <div class="section-line w-25 border-dark"></div>
@@ -61,7 +61,11 @@ get_header();
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : ?>
                                 <?php the_post(); ?>
-                                <?php get_template_part('template-parts/list'); ?>
+                                <?php if(get_option('show_on_front') != 'page'): ?>
+                                    <?php get_template_part('template-parts/list'); ?>
+                                <?php else: ?>
+                                    <?php get_template_part('template-parts/content'); ?>
+                                <?php endif; ?>
                             <?php endwhile; ?>
                             <?php the_posts_navigation(); ?>
                         <?php else : ?>
@@ -72,7 +76,7 @@ get_header();
             
             </main><!-- #main -->
             
-            <?php if (esc_attr(get_option('homepage')) == 'list'): ?>
+            <?php if (esc_attr(get_option('homepage')) == 'list' && get_option('show_on_front') != 'page'): ?>
     			<?php get_sidebar(); ?>
             <?php endif; ?>
         
