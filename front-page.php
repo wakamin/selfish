@@ -33,20 +33,28 @@ get_header();
                                 'order' => 'DESC'
                             ));
                         ?>
-                        <div class="col-12 col-lg-6">
-                            <div class="row">
-                                <?php selfish_post_grid_wide($posts[0]) ?>
-                                <?php selfish_post_grid_tall($posts[1]) ?>
-                                <?php selfish_post_grid_tall($posts[2]) ?>
+                        <?php if(count($posts) == 6): ?>
+                            <div class="col-12 col-lg-6">
+                                <div class="row">
+                                    <?php selfish_post_grid_wide($posts[0]) ?>
+                                    <?php selfish_post_grid_tall($posts[1]) ?>
+                                    <?php selfish_post_grid_tall($posts[2]) ?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="row">
-                                <?php selfish_post_grid_tall($posts[3]) ?>
-                                <?php selfish_post_grid_tall($posts[4]) ?>
-                                <?php selfish_post_grid_wide($posts[5]) ?>
+                            <div class="col-12 col-lg-6">
+                                <div class="row">
+                                    <?php selfish_post_grid_tall($posts[3]) ?>
+                                    <?php selfish_post_grid_tall($posts[4]) ?>
+                                    <?php selfish_post_grid_wide($posts[5]) ?>
+                                </div>
                             </div>
-                        </div>
+                        <?php else: ?>
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <strong><?php _e( 'Your post is less than 6, add more post to make home grid layout available.', 'selfish' ) ?></strong>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 <?php else: ?>
                     <div class="post-list">

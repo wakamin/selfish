@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Selfish 1.0.0\n"
-"POT-Creation-Date: 2018-03-22 10:09+0700\n"
-"PO-Revision-Date: 2018-03-22 10:09+0700\n"
+"POT-Creation-Date: 2018-03-22 10:52+0700\n"
+"PO-Revision-Date: 2018-03-22 10:53+0700\n"
 "Last-Translator: \n"
 "Language-Team: Samudra Digital <admin@samudradigital.com>\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -80,7 +80,7 @@ msgstr "%1$s komentar"
 
 #: comments.php:80
 msgid "Comments are closed."
-msgstr "Komentar ditutup"
+msgstr "Komentar ditutup."
 
 #: footer.php:30
 #, php-format
@@ -90,6 +90,13 @@ msgstr "Theme: %1$s oleh %2$s."
 #: front-page.php:24
 msgid "Latest Posts"
 msgstr "Artikel Terkini"
+
+#: front-page.php:54
+msgid ""
+"Your post is less than 6, add more post to make home grid layout available."
+msgstr ""
+"Postingan Anda kurang dari 6, tambah postingan lagi untuk dapat menggunakan "
+"home grid layout."
 
 #: functions.php:50
 msgid "Top Navigation Menu"
@@ -105,7 +112,7 @@ msgstr "Sidebar"
 
 #: functions.php:100
 msgid "Add widgets here."
-msgstr "Tambah widget disini"
+msgstr "Tambah widget disini."
 
 #: header.php:27
 msgid "Skip to content"
