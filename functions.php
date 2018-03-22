@@ -87,6 +87,10 @@ if (! function_exists('selfish_setup')) :
 endif;
 add_action('after_setup_theme', 'selfish_setup');
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 730;
+}
+
 /**
  * Register widget area.
  *
