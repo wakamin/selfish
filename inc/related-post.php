@@ -43,7 +43,7 @@ if (! function_exists('selfish_related_post')) :
                                 <div class="card">
                                     <?php if (has_post_thumbnail($post)): ?>
                                         <a href="<?php echo get_the_permalink($post) ?>" title="<?php echo get_the_title($post) ?>">
-                                            <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url($post) ?>" alt="<?php echo get_the_title($post) ?>">
+                                            <div class="post-thumbnail" style="background: url('<?php echo get_the_post_thumbnail_url($post) ?>') no-repeat center; background-size: cover;"></div>
                                         </a>
                                     <?php endif; ?>
                                     <div class="card-body">

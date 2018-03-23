@@ -510,13 +510,13 @@ object {
 
 /* =========== Content ========= */
 
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
 .size-thumbnail {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 body.mobile #page {
@@ -606,6 +606,9 @@ blockquote {
 
 #related-post {
     .card {
+        .post-thumbnail {
+            height: 180px;
+        }
         .card-body {
             a {
                 color: inherit;
