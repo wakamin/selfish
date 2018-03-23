@@ -87,8 +87,8 @@ if (! function_exists('selfish_setup')) :
 endif;
 add_action('after_setup_theme', 'selfish_setup');
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 730;
+if (! isset($content_width)) {
+    $content_width = 730;
 }
 
 /**
@@ -167,29 +167,8 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/nav-menu-walker.php';
 
 /**
- * Breadcrumb.
- */
-require get_template_directory() . '/inc/breadcrumb.php';
-
-/**
- * Json-ld.
- */
-require get_template_directory() . '/inc/json-ld.php';
-
-/**
- * Json-ld.
- */
-require get_template_directory() . '/inc/related-post.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Theme options
- */
-
- require get_template_directory() . '/inc/options.php';

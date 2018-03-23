@@ -17,9 +17,6 @@ $content_line_height: 1.75;
 $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
-// Breadcrumbs
-$breadcrumb-padding-x: 0;
-$breadcrumb-bg: none;
 // Bootstrap import
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Theme styling
@@ -86,12 +83,6 @@ a.excerpt-link-wrapper:hover {
     }
     .form-control {
         border: 1px solid #828282;
-    }
-}
-
-.breadcrumb {
-    a {
-        color: inherit;
     }
 }
 
@@ -464,50 +455,6 @@ object {
 
 /* ========== End header ========== */
 
-/* ========== Homepage ============= */
-
-#post-grid {
-    .wide,
-    .tall {
-        overflow: hidden;
-    }
-    .wide {
-        height: 250px;
-    }
-    @media (max-width: 601px) {
-        .wide {
-            height: 370px;
-        }
-    }
-    .tall {
-        height: 370px;
-    }
-    .inner {
-        box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.27);
-        transition: 500ms box-shadow ease;
-    }
-    .inner:hover {
-        box-shadow: none;
-    }
-    .category {
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    .category,
-    h2 {
-        color: #ffffff;
-        text-shadow: black 0 1px 1px;
-    }
-    button {
-        bottom: 30px;
-        position: absolute;
-        font-weight: bold;
-        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.27);
-    }
-}
-
-/* ========== End Homepage ============= */
-
 /* =========== Content ========= */
 
 .size-auto,
@@ -523,8 +470,15 @@ body.mobile #page {
     margin-top: 85px;
 }
 
-.post-list article {
-    margin-bottom: 50px;
+article.post.sticky {
+    border: 1px solid $regular_border;
+    padding: 13px;
+    margin-bottom: 35px;
+    background: #f8f9fa;
+}
+
+.site-main article {
+    margin-bottom: 45px;
 }
 
 .single,
@@ -586,6 +540,35 @@ blockquote {
     }
 }
 
+.posts-navigation {
+    margin-top: 30px;
+    .nav-previous {
+        float: left;
+    }
+    .nav-next {
+        float: right;
+    }
+    .nav-previous:before {
+        content: "\f30a";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 10px;
+    }
+    .nav-next:after {
+        content: "\f30b";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    .nav-links div {
+        padding-bottom: 2px;
+        border-bottom: 1px solid $regular_border;
+    }
+    .nav-links div:hover {
+        border-bottom: 2px solid #000000;
+    }
+}
+
 .tags-links {
     a {
         background: #efefef;
@@ -601,27 +584,6 @@ blockquote {
         color: inherit;
         background: #d6d5d5;
         padding-bottom: 5px;
-    }
-}
-
-#related-post {
-    .card {
-        .post-thumbnail {
-            height: 180px;
-        }
-        .card-body {
-            a {
-                color: inherit;
-            }
-            .card-title {
-                height: 50px;
-                overflow: hidden;
-            }
-            .card-text {
-                height: 120px;
-                overflow: hidden;
-            }
-        }
     }
 }
 

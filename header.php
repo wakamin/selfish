@@ -18,8 +18,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-
-    <?php selfish_json_ld() ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,10 +31,10 @@
                     <img src="<?php header_image(); ?>"  height="100px" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
                 </div>
             <?php endif; ?>
-            <?php if (site_logo_url() != ''): ?>
+            <?php if (selfish_site_logo_url() != ''): ?>
                 <div class="site-logo <?php echo (get_header_image()) ? 'contain-image' : '' ?>">
                     <a href="<?php echo get_home_url() ?>" title="<?php echo bloginfo('name') ?>">
-                        <img src="<?php echo site_logo_url() ?>" alt="<?php echo bloginfo('name') ?>" class="img-fluid">
+                        <img src="<?php echo selfish_site_logo_url() ?>" alt="<?php echo bloginfo('name') ?>" class="img-fluid">
                     </a>
                 </div>
             <?php endif; ?>
@@ -57,9 +55,9 @@
 			<nav class="top-nav navbar navbar-expand-lg navbar-light bg-light">
 				<div class="container">
 	                <a href="<?php echo get_home_url() ?>" class="navbar-brand d-lg-none" title="<?php echo bloginfo('name') ?>" rel="home">
-                        <?php if (site_logo_url() != ''): ?>
+                        <?php if (selfish_site_logo_url() != ''): ?>
                             <div class="site-logo">
-                                <img src="<?php echo site_logo_url() ?>" alt="<?php echo bloginfo('name') ?>" class="img-fluid">
+                                <img src="<?php echo selfish_site_logo_url() ?>" alt="<?php echo bloginfo('name') ?>" class="img-fluid">
                             </div>
                         <?php else: ?>
                             <?php bloginfo('name'); ?>

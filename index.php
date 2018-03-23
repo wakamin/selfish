@@ -17,24 +17,19 @@ get_header();
 
 	<div id="primary" class="content-area my-4 container">
 		<div class="row">
-            <main id="main" class="site-main <?php echo (esc_attr(get_option('homepage') == 'grid') || get_option('show_on_front') == 'page') ? 'col-md-12' : 'col-md-9' ?>">
-				<div class="post-list">
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : ?>
-                            <?php the_post(); ?>
-                            <?php get_template_part('template-parts/list'); ?>
-                        <?php endwhile; ?>
-                        <?php the_posts_navigation(); ?>
-                    <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'none'); ?>
-                    <?php endif; ?>
-                </div>
+            <main id="main" class="site-main col-md-9">
+				<?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : ?>
+                        <?php the_post(); ?>
+                         <?php get_template_part('template-parts/list'); ?>
+                    <?php endwhile; ?>
+                    <?php the_posts_navigation(); ?>
+                <?php else : ?>
+                    <?php get_template_part('template-parts/content', 'none'); ?>
+                <?php endif; ?>
             </main><!-- #main -->
             
-            <?php if (esc_attr(get_option('homepage')) == 'list' && get_option('show_on_front') != 'page'): ?>
-    			<?php get_sidebar(); ?>
-            <?php endif; ?>
-        
+            <?php get_sidebar(); ?>
         </row><!-- .row -->
 	</div><!-- #primary -->
 

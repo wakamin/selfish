@@ -22,8 +22,6 @@ get_header();
                     <?php the_post_navigation(); ?>
                 </div>
 
-                <?php selfish_related_post() ?>
-
                 <div class="container my-4">
                     <div class="row">
                         <div class="col-12 col-md-10 col-lg-8 m-auto">

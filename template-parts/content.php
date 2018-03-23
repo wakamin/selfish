@@ -13,9 +13,6 @@
 	<header class="entry-header container mb-4">
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 m-auto">
-                <?php if (is_singular() && !is_front_page()): ?>
-                    <?php selfish_breadcrumb() ?>
-                <?php endif; ?>
 
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
